@@ -1,4 +1,33 @@
+
 function Certifications() {
+  const certificates = [
+    {
+      title: "Introduction to Software Quality Assurance",
+      organization: "University of Moratuwa",
+      image: "images/Certificates/QA_moratuwa.jpg",
+    },
+    {
+      title: "Introduction to Software Quality Assurance",
+      organization: "Coursera",
+      image: "images/Certificates/QA_coursers.jpg",
+    },
+    {
+      title: "Python for Beginners",
+      organization: "University of Moratuwa",
+      image: "images/Certificates/Python_for_beginners.jpg",
+    },
+    {
+      title: "Python Programming",
+      organization: "University of Moratuwa",
+      image: "images/Certificates/Python.jpg",
+    },
+    {
+      title: "Red Hat Training: Getting Started with Linux Fundamentals (RH104 - RHA) - Ver. 9.1",
+      organization: "Red Hat Academy",
+      image: "images/Certificates/Red Hat.jpg",
+    },
+  ];
+
   return (
     <section id="certifications" className="certifications-section py-5">
       <div className="container">
@@ -8,77 +37,28 @@ function Certifications() {
         </h2>
 
         <div className="row g-4 justify-content-center">
+          {certificates.map((certificate, index) => (
+            <div className="col-lg-5 col-md-6" key={index}>
+              <div className="certification-card h-100">
 
-          {/* QA */}
-          <div className="col-md-6 col-lg-4">
-            <div className="certification-card h-100">
-              <i className="bi bi-patch-check certification-icon"></i>
+                <img
+                  src={certificate.image}
+                  alt={certificate.title}
+                  className="certificate-image"
+                />
 
-              <h4>Introduction to software quality assurance </h4>
+                <h4>{certificate.title}</h4>
 
-              <p>
-                University of Moratuwa
-              </p>
+                <p>{certificate.organization}</p>
+
+              </div>
             </div>
-          </div>
-
-          {/* QA */}
-          <div className="col-md-6 col-lg-4">
-            <div className="certification-card h-100">
-              <i className="bi bi-patch-check certification-icon"></i>
-
-              <h4>Introduction to software quality assurance</h4>
-
-              <p>
-                Coursera
-              </p>
-            </div>
-          </div>
-
-          {/* Python */}
-          <div className="col-md-6 col-lg-4">
-            <div className="certification-card h-100">
-              <i className="bi bi-code-slash certification-icon"></i>
-
-              <h4>Python for Beginners </h4>
-
-              <p>
-                University of Moratuwa
-              </p>
-            </div>
-          </div>
-
-          {/* Python */}
-          <div className="col-md-6 col-lg-4">
-            <div className="certification-card h-100">
-              <i className="bi bi-terminal certification-icon"></i>
-
-              <h4>Python Programming </h4>
-
-              <p>
-                University of Moratuwa
-              </p>
-            </div>
-          </div>
-
-          {/* Linux */}
-          <div className="col-md-6 col-lg-4">
-            <div className="certification-card h-100">
-              <i className="bi bi-terminal-fill certification-icon"></i>
-
-              <h4>Red Hat Training: Getting Started with Linux Fundamentals (RH104 - RHA) - Ver. 9.1 </h4>
-
-             
-            </div>
-          </div>
-
-
-
+          ))}
         </div>
 
       </div>
     </section>
-  )
+  );
 }
 
-export default Certifications
+export default Certifications;
