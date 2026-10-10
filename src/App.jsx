@@ -6,7 +6,7 @@ import Projects from './components/projects'
 import Education from './components/education'
 import Certification from './components/certification'
 import Activities from './components/activities'
-import Contact from './components/contact'
+import Contact from './components/Contact'
 
 
 
