@@ -26,7 +26,7 @@ function Hero() {
   </a>
 
  <a
-  href="/CV/Sathma_Mansahani_QA_CV.pdf"
+  href="/CV/SathmaMansahani_QA_CV.pdf"
   target="_blank"
   rel="noreferrer"
   className="btn cv-btn"
