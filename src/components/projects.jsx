@@ -44,7 +44,7 @@ function Projects() {
 
     {
       title: "Expense Tracker Web Application",
-      type: "Web Development • Ongoing",
+      type: "Frontend Web Development ",
       image: "/images/projects/Expense tracker.jpg",
 
       description:
